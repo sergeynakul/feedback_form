@@ -26,6 +26,7 @@ post '/' do
   http.use_ssl = (url.scheme == "https")
   response = http.request(req)
   response_hash = JSON.parse(response.body)
+  p response_hash["score"]
 
   if response_hash["score"] >= 0.5
     email = params[:email]
