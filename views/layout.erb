@@ -2,7 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Feedback form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcWA6oUAAAAAColfo_aLyhX6QC4H5SgskV39ix8"></script>
+    <script>
+      grecaptcha.ready(function () {
+        grecaptcha.execute('6LcWA6oUAAAAAColfo_aLyhX6QC4H5SgskV39ix8', { action: '/' }).then(function (token) {
+          var recaptchaResponse = document.getElementById('recaptchaResponse');
+          recaptchaResponse.value = token;
+        });
+      });
+    </script>
   </head>
   <body>
     <%= yield %>

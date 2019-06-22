@@ -1,5 +1,37 @@
-<form method="POST" action="/thankyou">
-  <p>Your email: <input type="text" name="email"></p>
-  <p>Your text: <input type="text" name="body"></p>
-  <input type="submit">
-</form>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-half">
+        <form method="POST">
+          <h1 class="title">
+            Feedback form
+          </h1>
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input type="text" name="name" class="input" placeholder="Name" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input type="email" name="email" class="input" placeholder="Email Address" required>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Message</label>
+            <div class="control">
+              <textarea name="message" class="textarea" placeholder="Message" required></textarea>
+            </div>
+          </div>
+          <div class="field is-grouped">
+            <div class="control">
+              <button type="submit" class="button is-link">Send Message</button>
+            </div>
+          </div>
+          <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
