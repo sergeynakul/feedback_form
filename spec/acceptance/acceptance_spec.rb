@@ -1,8 +1,10 @@
-require File.expand_path '../acceptance_helper.rb', __FILE__
+# frozen_string_literal: true
 
-feature "My Sinatra Application" do
+require File.expand_path 'acceptance_helper.rb', __dir__
+
+feature 'My Sinatra Application' do
   scenario "should have button 'Send Message' on the home page" do
-    visit "/"
-    expect(page).to have_button("Send Message")
+    visit '/'
+    expect(page).to have_button('Send Message')
   end
 end
